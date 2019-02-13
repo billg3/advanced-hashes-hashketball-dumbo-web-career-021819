@@ -1,4 +1,5 @@
-# Write your code here!
+require 'pry'
+
 def game_hash
   game_hash = {:home => {
                     :team_name => "Brooklyn Nets",
@@ -116,14 +117,23 @@ def game_hash
 end
 
 def num_points_scored(player)
-score = ""
 game_hash.each do |home_away, team_info|
   if team_info[:players].include?(player)
-      score = team_info[:players][player][:points]
+    return 
     end
   end
-  return score
 end
+
+def player_number(number)
+  game_hash.each do |team, info|
+    binding.pry
+  return [:player][player][:number]
+end 
+end
+
+player_number(33)
+
+
 
 def shoe_size(player)
   size = ""
@@ -304,7 +314,6 @@ def long_name_steals_a_ton?
   end
   true_false
 end
-
 
 
 
